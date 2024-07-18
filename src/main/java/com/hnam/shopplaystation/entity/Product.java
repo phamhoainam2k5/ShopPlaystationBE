@@ -32,7 +32,15 @@ public class Product {
     // MÔ TẢ SẢN PHẨM
     @Column(columnDefinition = "LONGTEXT")
     private String description;
-    
+
+    // SỐ LƯỢNG SẢN PHẨM TRONG KHO
+    @Column(name = "number_of_products")
+    private int numberOfProducts;
+
+    // SỐ LƯỢNG SẢN PHẨM ĐÃ BÁN RA
+    @Column(name = "number_of_products_sold")
+    private int numberOfProductsSold;
+
     // TRẠNG THÁI SẢN PHẨM
     @Enumerated(EnumType.STRING)
     private ProductStatus status;

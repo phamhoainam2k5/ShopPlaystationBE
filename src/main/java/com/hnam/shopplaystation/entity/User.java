@@ -24,11 +24,7 @@ public class User {
     private String address;
     
     // LOẠI NGƯỜI DÙNG
-    @Enumerated(EnumType.STRING)
-    private UserType userType;
-    
-    public enum UserType {
-        ADMIN,
-        CUSTOMER
-    }
+    @ManyToOne
+    @JoinColumn(name = "role_id")
+    private Role role;
 }
