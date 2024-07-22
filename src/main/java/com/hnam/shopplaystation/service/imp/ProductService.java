@@ -17,7 +17,7 @@ public class ProductService implements IProductService{
 
     @Override
     public List<Product> getTop5SellingProducts() {
-        return productRepository.findTop5ByOrderByNumberOfProductsSoldDesc();
+        return productRepository.findTop5ByOrderByNumberOfProductsSoldDesc().stream().limit(5).toList();
     }
 
     @Override

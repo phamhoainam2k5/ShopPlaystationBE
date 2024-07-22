@@ -25,6 +25,8 @@ public class Product {
     // THƯƠNG HIỆU CỦA SẢN PHẨM
     private String brand;
 
+    private int price;
+
     // THÔNG SỐ KỸ THUẬT CỦA SẢN PHẨM
     @Column(columnDefinition = "LONGTEXT")
     private String specifications;
@@ -51,7 +53,7 @@ public class Product {
     private Category category;
 
     public enum ProductStatus {
-        IN_STOCK,
+        STOCKING,
         OUT_OF_STOCK
     }
 }
