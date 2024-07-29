@@ -22,7 +22,6 @@ public class ProductService implements IProductService{
 
     @Override
     public List<Product> getTop5SellingProductsByCategory(Long categoryId) {
-        return productRepository.findTop5ByCategoryIdOrderByNumberOfProductsSoldDesc(categoryId);
+        return productRepository.findTop5ByCategoryIdOrderByNumberOfProductsSoldDesc(categoryId).stream().limit(5).toList();
     }
-    
 }
