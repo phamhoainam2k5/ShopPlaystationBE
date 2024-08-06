@@ -35,8 +35,13 @@ public class Product {
     @Column(columnDefinition = "LONGTEXT")
     private String generalDescription;
 
+    // MÔ TẢ CHI TIẾT SẢN PHẨM
     @Column(columnDefinition = "LONGTEXT")
     private String detailsDescription;
+
+    // THÔNG TIN THÊM
+    @Column(columnDefinition = "LONGTEXT")
+    private String moreInformation;
 
     // SỐ LƯỢNG SẢN PHẨM TRONG KHO
     @Column(name = "number_of_products")
