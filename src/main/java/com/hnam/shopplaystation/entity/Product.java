@@ -31,9 +31,12 @@ public class Product {
     @Column(columnDefinition = "LONGTEXT")
     private String specifications;
 
-    // MÔ TẢ SẢN PHẨM
+    // MÔ TẢ CHUNG NGẮN GỌN SẢN PHẨM
     @Column(columnDefinition = "LONGTEXT")
-    private String description;
+    private String generalDescription;
+
+    @Column(columnDefinition = "LONGTEXT")
+    private String detailsDescription;
 
     // SỐ LƯỢNG SẢN PHẨM TRONG KHO
     @Column(name = "number_of_products")
