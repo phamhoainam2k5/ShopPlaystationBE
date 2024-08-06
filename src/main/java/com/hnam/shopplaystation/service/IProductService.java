@@ -9,4 +9,6 @@ public interface IProductService {
     List<Product> getTop5SellingProducts();
 
     List<Product> getTop5SellingProductsByCategory(Long categoryId);
+
+    List<Product> getAllProductsByCategoryId(Long categoryId);
 }
