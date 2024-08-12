@@ -1,6 +1,7 @@
 package com.hnam.shopplaystation.service.imp;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,5 +29,10 @@ public class ProductService implements IProductService{
     @Override
     public List<Product> getAllProductsByCategoryId(Long categoryId) {
         return productRepository.findByCategoryId(categoryId);
+    }
+
+    @Override
+    public Optional<Product> getProductById(Long id) {
+        return productRepository.findById(id);
     }
 }

@@ -1,6 +1,7 @@
 package com.hnam.shopplaystation.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -33,5 +34,12 @@ public class ProductController {
     @GetMapping("/category/{categoryId}")
     public List<Product> getAllProductsByCategoryId(@PathVariable Long categoryId) {
         return productService.getAllProductsByCategoryId(categoryId);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Product> getProduct(@PathVariable Long id) {
+        return productService.getProductById(id)
+                                .map(product -> ResponseEntity.ok().body(product))
+                                .orElseGet(() -> ResponseEntity.notFound().build());
     }
 }
