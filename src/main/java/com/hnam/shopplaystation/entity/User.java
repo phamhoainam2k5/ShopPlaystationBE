@@ -20,6 +20,9 @@ public class User {
     // EMAIL CỦA KHÁCH DÙNG ĐỂ ĐĂNG NHẬP 
     private String email;
 
+    // PASSWORD ĐỂ ĐĂNG NHẬP VÀO TÀI KHOẢN
+    private String password;
+
     // ĐỊA CHỈ GIAO HÀNG NẾU KHÁCH CÓ NHU CẦU ĐẶT HÀNG QUA MẠNG
     private String address;
     

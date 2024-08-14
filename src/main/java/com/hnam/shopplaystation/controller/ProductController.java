@@ -14,7 +14,7 @@ import com.hnam.shopplaystation.entity.Product;
 import com.hnam.shopplaystation.service.imp.ProductService;
 
 @RestController
-@CrossOrigin("*")
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/api/products")
 public class ProductController {
     

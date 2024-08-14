@@ -61,7 +61,7 @@ public class Product {
     private Category category;
 
     public enum ProductStatus {
-        STOCKING,
+        IN_STOCK,
         OUT_OF_STOCK
     }
 }
