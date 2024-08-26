@@ -27,7 +27,7 @@ public class UserService implements IUserService{
         user.setName(userDTO.getName());
         user.setPhone(userDTO.getPhone());
         user.setEmail(userDTO.getEmail());
-        user.setPassword(userDTO.getPassword()); // Bạn có thể mã hóa mật khẩu ở đây
+        user.setPassword(userDTO.getPassword()); // có thể mã hóa mật khẩu ở đây
         user.setAddress(userDTO.getAddress());
         user.setRole(role);
 

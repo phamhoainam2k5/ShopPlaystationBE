@@ -9,6 +9,10 @@ import lombok.*;
 @Entity @Table(name = "products")
 @AllArgsConstructor @NoArgsConstructor @Data
 public class Product {
+    public Product(Long productId) {
+        this.id = productId;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
